@@ -10,6 +10,7 @@ import {
     Easing,
     Image,
     View,
+    Platform,
     Text
 } from 'react-native';
 import _ from 'lodash';
@@ -1060,7 +1061,7 @@ export default class VideoPlayer extends Component {
 const styles = {
     player: StyleSheet.create({
         container: {
-            flex: 1,
+            flex: Platform.OS === "ios" ? 1 : 0,
             alignSelf: 'stretch',
             justifyContent: 'space-between',
         },
